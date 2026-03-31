@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<!-- Tab Details -->
+
+        <link type="image/x-icon" href="media/favicon.ico" rel="icon">
+        <title id="title">home - weather.js</title>
+
+<!-- JS and Stylesheets -->
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="home.js"></script>
+
+    </head>
+
+    <body class="m-0 text-[#f0f0f2] w-screen h-screen bg-linear-to-t from-[#242429] to-zinc-700">
+
+        <div id="background" class="">
+
+<!-- Navigation Bar -->
+
+        <div id="navBar" class="flex ml-10 pt-5 space-x-7">
+
+            <button id="homeBTN" class="w-20 h-20 invert hover:opacity-80 active:opacity-70"><img src="media/weathericon.png"></button>
+            
+            <button id="searchBTN" class="invert mt-5 w-10 h-10 hover:opacity-80 active:opacity-70"><img src="media/searchico.webp"></button>
+
+            <button id="radarBTN" class="invert mt-5 w-10 h-10 hover:opacity-80 active:opacity-70"><img src="media/radar.png"></button>
+            
+        <div class="items-center justify-center text-center">
+            <h1 class="text-7xl absolute left-1/2 transform -translate-x-1/2">
+                weather.js
+            </h1>
+        </div>
+
+        </div>
+
+<!-- The heading bits -->
+
+    <div class="flex flex-col items-center leading-loose space-y-8 mt-5">
+        <div class="flex flex-col text-center mt-10">
+            <h2 class="text-5xl">Major Cities</h2>
+
+<!-- Cities weather -->
+
+        <div id="outBg" class="flex mt-10 w-[80vw] h-[30vh] rounded-xl outline outline-zinc-300 outline-2 bg-zinc-800 drop-shadow-xl justify-center text-center md:flex-row shrink">
+            
+            <div id="majCities" class="flex mt-2 space-x-20 text-center">
+
+<!-- Sydney -->
+
+                <div id="brisbane" class="">
+
+                    <div id="bneTitle" class="text-3xl">
+                        <h2>Brisbane</h2>
+                    </div>
+                    
+                    <div id="bneOver" class="mt-5 space-y-2"></div>
+                </div>
+
+<!-- Cairo -->
+
+                <div id="cairo" class="">
+
+                    <div id="cairoTitle" class="text-3xl">
+                        <h2>Cairo</h2>
+                    </div>
+                    
+                    <div id="cairoOver" class="mt-5 space-y-2"></div>
+                </div>
+
+<!-- Tokyo -->
+
+                <div id="tokyo" class="">
+
+                    <div id="tokyoTitle" class="text-3xl">
+                        <h2>Tokyo</h2>
+                    </div>
+                    
+                    <div id="tokyoOver" class="mt-5 space-y-2"></div>
+                </div>
+
+<!-- London -->
+
+                <div id="london" class="">
+
+                    <div id="londonTitle" class="text-3xl">
+                        <h2>London</h2>
+                    </div>
+                    
+                    <div id="londonOver" class="mt-5 space-y-2"></div>
+                </div>
+
+<!-- New York City -->
+
+                <div id="newyork" class="">
+
+                    <div id="nycTitle" class="text-3xl">
+                        <h2>New York</h2>
+                    </div>
+                    
+                    <div id="nycOver" class="mt-5 space-y-2"></div>
+                </div>
+
+<!-- Mexico City -->
+
+                <div id="mxc" class="space-y-5">
+
+                    <div id="mxcTitle" class="text-3xl">
+                        <h2>Tel Aviv</h2>
+                    </div>
+                    
+                    <div id="mxcOver" class="mt-5 space-y-2"></div>
+                
+                </div>
+            
+            </div>
+
+        </div>
+    
+    </div>
+
+<!-- Unit toggle -->
+
+<div class="flex justify-center mt-10">
+
+    <label class="inline-flex items-center gap-3 cursor-pointer">
+    
+    <span class="select-none text-sm font-medium text-heading">C°</span>
+
+    <input type="checkbox" id="unitSwitch" class="sr-only peer">
+
+    <div class="relative w-9 h-5 bg-zinc-500 peer-focus:outline-none rounded-full 
+        peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full
+        after:content-[''] after:absolute after:top-[2px] after:start-[2px]
+        after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all
+        peer-checked:bg-brand">
+    </div>
+
+    <span class="select-none text-sm font-medium text-heading">F°</span>
+
+    </label>
+
+</div>
+
+</div>
+    
+    </body>
+</html>

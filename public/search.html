@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+<!-- Title and Icon -->
+
+        <link type="image/x-icon" href="media/favicon.ico" rel="icon">
+        <title id="title">search - weather.js</title>
+
+<!-- JS and Stylesheets -->
+
+        <script src="search.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="autocomplete.js"></script>
+
+    </head>
+
+<body class="m-0 text-[#f0f0f2] w-screen h-screen bg-linear-to-t from-[#242429] to-zinc-700">
+
+        <div id="background" class="">
+
+<!-- Navigation Bar -->
+
+        <div id="navBar" class="flex ml-10 pt-5 space-x-7">
+
+            <button id="homeBTN" class="w-20 h-20 invert hover:opacity-80 active:opacity-70"><img src="media/weathericon.png"></button>
+            
+            <button id="searchBTN" class="invert mt-5 w-10 h-10 hover:opacity-80 active:opacity-70"><img src="media/searchico.webp"></button>
+
+            <button id="radarBTN" class="invert mt-5 w-10 h-10 hover:opacity-80 active:opacity-70"><img src="media/radar.png"></button>
+            
+        <div class="items-center justify-center text-center">
+            <h1 class="text-7xl absolute left-1/2 transform -translate-x-1/2">
+                weather.js - search
+            </h1>
+        </div>
+
+        </div>
+
+<!-- The heading bits -->
+
+            <div class="flex pt-10 flex-col items-center leading-loose space-y-8">
+
+                <div class="relative inline-block">
+
+                    <div id="headerOutline" class="flex flex-row outline rounded-xl">
+                        <input autocomplete="off" type="text" id="cityInput" class="rounded-l-xl bg-zinc-800 w-[30vw] px-3 focus:outline-none focus:drop-shadow-2xl" placeholder="Enter City">
+
+<!-- Search dropdown-->
+
+                    <div id="dropdown"
+                        class="absolute left-0 bg-[#313233] border rounded-xl w-[30vw] mt-8 max-h-48 overflow-y-auto hidden z-50"></div>
+
+<!-- Input button -->
+
+                    <button id="weatherBTN" class="rounded-r-xl bg-[#cfcfd1] hover:bg-gray-300 active:bg-gray-500 px-2 border-l top-20 left-25"><img src="media/searchico.webp" class="h-5 w-5"></button>
+
+                </div>
+
+            </div>
+
+<!-- Body Items -->
+
+            <div id="cityName" class="flex text-5xl items-center">
+                <h1>City Name</h1>
+            </div>
+
+            <div class="flex gap-4 mt-4 justify-center">
+
+<!-- Get the current weather -->
+
+                <div id="output" class="flex flex-col w-50 h-65 rounded-xl outline outline-zinc-300 outline-2 bg-zinc-800 drop-shadow-xl">
+
+                    <div id="weatherOutput" class="flex flex-col shrink mt-2 items-center justify-self-center h-screen leading-loose space-y-3">
+                    
+                    <h2 id="subHeading" class="text-3xl text-center shrink">Overview</h2>
+                    
+                    <div id="weatherInfo" class="text-center shrink mt-1 space-y-3 px-2">
+                            <p>Current: --°C</p>
+                            <p>Min: --°C</p>
+                            <p>Max: --°C</p>
+                            <p>description</p>
+                    </div>
+
+<!-- Unit toggle -->
+
+<div class="fixed -bottom-15 mt-10">
+
+    <label class="inline-flex items-center gap-3 cursor-pointer">
+    
+    <span class="select-none text-sm font-medium text-heading">C°</span>
+
+    <input type="checkbox" id="unitSwitch" class="sr-only peer">
+
+    <div class="relative w-9 h-5 bg-zinc-500 peer-focus:outline-none rounded-full 
+        peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full
+        after:content-[''] after:absolute after:top-[2px] after:start-[2px]
+        after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all
+        peer-checked:bg-brand">
+    </div>
+
+    <span class="select-none text-sm font-medium text-heading">F°</span>
+
+    </label>
+
+</div>
+
+                </div>
+            
+            </div>
+            
+        </div>
+
+    </body>
+</html>
